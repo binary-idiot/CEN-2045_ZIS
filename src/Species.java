@@ -1,22 +1,26 @@
-import java.security.InvalidParameterException;
-
 public class Species {
 
     private final String name;
     private final String info;
     private final String food;
-    private final int foodAmount;
+    private final int amount;
 
-    public Species(String name, String info, String food, int foodAmount) {
+    public Species(String name, String info, String food, int amount) {
         this.name = name;
         this.info = info;
         this.food = food;
 
-        if(foodAmount > 0) {
-            this.foodAmount = foodAmount;
+        if(amount > 0) {
+            this.amount = amount;
         } else {
-            throw new IllegalArgumentException("Food amount: " + foodAmount + " is invalid");
+            throw new IllegalArgumentException("Food amount: " + amount + " is invalid");
         }
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %s, Info: %s, Food: %s, Food Amount: %d",
+                getName(), getInfo(), getFood(), getAmount());
     }
 
     public String getName() {
@@ -31,7 +35,7 @@ public class Species {
         return food;
     }
 
-    public int getFoodAmount() {
-        return foodAmount;
+    public int getAmount() {
+        return amount;
     }
 }
