@@ -16,15 +16,15 @@ public class DBInterface {
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
-    static void update(String entry){
-
+    static boolean update(String entry){
+        return true;
     }
 
-    static void add(String entry){
-
+    static boolean add(String entry){
+        return true;
     }
 
-    static void delete(String entry){
-
+    static boolean delete(String entry){
+        return true;
     }
 }

@@ -23,6 +23,15 @@ public class SpeciesList {
 				.findFirst();
 	}
 
+	public boolean addSpecies(Species species){
+		if(DBInterface.add(species.toString())){
+			speciesList.add(species);
+			return true;
+		}
+
+		return false;
+	}
+
 	private ArrayList<Species> retrieveSpecies() {
 		ArrayList<Species> speciesList = new ArrayList<>();
 

@@ -16,6 +16,15 @@ public class AnimalList {
         return animals.get(i);
     }
 
+    public boolean addAnimal(Animal animal){
+        if(DBInterface.add(animal.toString())){
+            animals.add(animal);
+            return true;
+        }
+
+        return false;
+    }
+
     private ArrayList<Animal> retrieveAnimals(){
         ArrayList<Animal> animals = new ArrayList<>();
 
