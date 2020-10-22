@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class AnimalList {
-    private ArrayList<Animal> animals;
+    private final ArrayList<Animal> animals;
 
     public AnimalList() {
         this.animals = retrieveAnimals();

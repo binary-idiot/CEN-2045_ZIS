@@ -3,7 +3,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class SpeciesList {
-	private ArrayList<Species> speciesList;
+	private final ArrayList<Species> speciesList;
 
 	public SpeciesList() {
 		this.speciesList = retrieveSpecies();
