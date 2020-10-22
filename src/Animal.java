@@ -22,6 +22,7 @@ public class Animal {
         }
     }
 
+    @Override
     public String toString(){
         return String.format("ID: %s, Name: %s, Species: %s, Enclosure: %d, Notes:\n %s\n",
                 getId(), getName(), getSpecies().getName(), getEnclosure().getId(), getNotes());
@@ -44,6 +45,6 @@ public class Animal {
     }
 
     public String getNotes() {
-        return notes != "" ? notes : "No notes yet";
+        return notes.equals("") ? notes : "No notes yet";
     }
 }
