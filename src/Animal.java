@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public class Animal {
 
     private final String id;
@@ -46,5 +48,19 @@ public class Animal {
 
     public String getNotes() {
         return notes.equals("") ? notes : "No notes yet";
+    }
+
+    public static Animal buildAnimal(Map<String, String> animalMap){
+
+        Map<String, String> speciesMap = DBInterface.filter("species", s -> s.getKey().equals(animalMap.get("species"))).get(animalMap.get("species"));
+        Map<String, String> enclosureMap = DBInterface.filter("enclosures", e -> e.getKey().equals(animalMap.get("enclosure"))).get(animalMap.get("enclosure"));
+
+        Enclosure enclosure = new Enclosure(Integer.parseInt(enclosureMap.get("id")), enclosureMap.get("info"));
+        Species species = new Species(speciesMap.get("name"), speciesMap.get("info"), speciesMap.get("food"), Integer.parseInt(speciesMap.get("amount")));
+
+        Animal animal = new Animal(animalMap.get("id"), animalMap.get("name"), species, enclosure);
+        animal.modifyNotes(animalMap.get("notes"));
+
+        return animal;
     }
 }

@@ -38,7 +38,7 @@ public class SpeciesList {
 		for(Map.Entry<String, Map<String, String>> entry : DBInterface.select("species").entrySet()) {
 			Map<String, String> speciesMap = entry.getValue();
 
-			Species species = new Species(speciesMap.get("name"), speciesMap.get("info"), speciesMap.get("food"), Integer.parseInt(speciesMap.get("amount")));
+			Species species = Species.buildSpecies(speciesMap);
 			speciesList.add(species);
 		}
 

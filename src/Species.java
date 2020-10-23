@@ -1,3 +1,5 @@
+import java.util.Map;
+
 public class Species {
 
     private final String name;
@@ -37,5 +39,9 @@ public class Species {
 
     public int getAmount() {
         return amount;
+    }
+
+    public static Species buildSpecies(Map<String, String> speciesMap){
+        return new Species(speciesMap.get("name"), speciesMap.get("info"), speciesMap.get("food"), Integer.parseInt(speciesMap.get("amount")));
     }
 }
