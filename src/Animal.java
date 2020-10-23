@@ -56,7 +56,7 @@ public class Animal {
         Map<String, String> enclosureMap = DBInterface.filter("enclosures", e -> e.getKey().equals(animalMap.get("enclosure"))).get(animalMap.get("enclosure"));
 
         Enclosure enclosure = new Enclosure(Integer.parseInt(enclosureMap.get("id")), enclosureMap.get("info"));
-        Species species = new Species(speciesMap.get("name"), speciesMap.get("info"), speciesMap.get("food"), Integer.parseInt(speciesMap.get("amount")));
+        Species species = Species.buildSpecies(speciesMap);
 
         Animal animal = new Animal(animalMap.get("id"), animalMap.get("name"), species, enclosure);
         animal.modifyNotes(animalMap.get("notes"));
