@@ -73,15 +73,15 @@ public class ZooData {
     private static Map<String, Map<String, String>> createFeedingData(){
         Map<String, Map<String, String>> tasks = new HashMap<>();
 
-        tasks.put("1", createFeedingTask("a1", "10:00a", "true"));
-        tasks.put("2", createFeedingTask("a2", "11:00a", "true"));
-        tasks.put("3", createFeedingTask("a3", "11:00a", "false"));
-        tasks.put("4", createFeedingTask("a4", "10:00a", "false"));
-        tasks.put("5", createFeedingTask("a5", "1:00p", "false"));
-        tasks.put("6", createFeedingTask("a6", "1:00p", "false"));
-        tasks.put("7", createFeedingTask("a7", "2:00p", "false"));
-        tasks.put("8", createFeedingTask("a8", "1:00p", "false"));
-        tasks.put("9", createFeedingTask("a9", "2:00p", "false"));
+        tasks.put("1", createFeedingTask("a1", "10:00", "true"));
+        tasks.put("2", createFeedingTask("a2", "11:00", "true"));
+        tasks.put("3", createFeedingTask("a3", "11:00", "false"));
+        tasks.put("4", createFeedingTask("a4", "10:00", "false"));
+        tasks.put("5", createFeedingTask("a5", "13:00", "false"));
+        tasks.put("6", createFeedingTask("a6", "13:00", "false"));
+        tasks.put("7", createFeedingTask("a7", "14:00", "false"));
+        tasks.put("8", createFeedingTask("a8", "13:00", "false"));
+        tasks.put("9", createFeedingTask("a9", "14:00", "false"));
         tasks.put("10", createFeedingTask("a10", "10:00a", "false"));
 
         return tasks;
