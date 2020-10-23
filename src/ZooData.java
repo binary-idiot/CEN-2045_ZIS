@@ -63,9 +63,9 @@ public class ZooData {
     private static Map<String, Map<String, String>> createAppointmentData(){
         Map<String, Map<String, String>> appointments = new HashMap<>();
 
-        appointments.put("1", createAppointment("a2", "10/20/20"));
-        appointments.put("2", createAppointment("a5", "10/22/20"));
-        appointments.put("3", createAppointment("a10", "10/25/20"));
+        appointments.put("1", createAppointment("a2", "10/20/2020:10:30"));
+        appointments.put("2", createAppointment("a5", "10/22/2020:13:00"));
+        appointments.put("3", createAppointment("a10", "10/25/2020:15:15"));
 
         return appointments;
     }
