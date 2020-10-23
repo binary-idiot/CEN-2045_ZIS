@@ -19,7 +19,7 @@ public class Appointment {
     }
 
     public static Appointment buildAppointment(Map<String, String> appointmentMap){
-        Map<String, String> animalMap = DBInterface.filter("animal", a -> a.getKey().equals(appointmentMap.get("animal"))).get(appointmentMap.get("animal"));
+        Map<String, String> animalMap = DBInterface.filter("animals", a -> a.getKey().equals(appointmentMap.get("animal"))).get(appointmentMap.get("animal"));
         Animal animal = Animal.buildAnimal(animalMap);
 
         return new Appointment(animal, LocalDateTime.parse(appointmentMap.get("time")));

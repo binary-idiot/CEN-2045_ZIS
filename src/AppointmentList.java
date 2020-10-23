@@ -27,7 +27,9 @@ public class AppointmentList {
     }
 
     public Appointment getNext(){
-        return appointments.get(0);
+        Appointment appointment = appointments.get(0);
+        removeAppointment(appointment);
+        return appointment;
     }
 
     public ArrayList<Appointment> getAppointments() {
@@ -41,6 +43,7 @@ public class AppointmentList {
             Map<String, String> appointmentMap = entry.getValue();
 
             Appointment appointment = Appointment.buildAppointment(appointmentMap);
+            appointments.add(appointment);
         }
 
         return appointments;
