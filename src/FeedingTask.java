@@ -28,7 +28,7 @@ public class FeedingTask {
 		this.compleationStatus = compleationStatus;
 	}
 	
-	public FeedingTask buildTask(Map<String, String> taskMap) {
+	public static FeedingTask buildTask(Map<String, String> taskMap) {
 		Map<String, String> animalMap = DBInterface.filter("animals", a -> a.getKey().equals(taskMap.get("animal"))).get(taskMap.get("animal"));
 		
 		Animal animal = Animal.buildAnimal(animalMap);

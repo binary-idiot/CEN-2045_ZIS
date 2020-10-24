@@ -19,5 +19,6 @@ public class StaffInterface {
         for(Appointment appointment : appointments.getAppointments()){
             System.out.println("Appointment for " + appointment.getAnimal().getName() + " scheduled at " + appointment.getTime().toString());
         }
+        
     }
 }
