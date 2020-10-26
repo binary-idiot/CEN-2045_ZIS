@@ -28,6 +28,11 @@ public class FeedingTask {
 		this.compleationStatus = compleationStatus;
 	}
 	
+	@Override
+	public String toString(){
+		return "Animal: " + animal.getName() + ", Time: " + time.toString();
+	}
+	
 	public static FeedingTask buildTask(Map<String, String> taskMap) {
 		Map<String, String> animalMap = DBInterface.filter("animals", a -> a.getKey().equals(taskMap.get("animal"))).get(taskMap.get("animal"));
 		

@@ -17,6 +17,11 @@ public class Appointment {
     public LocalDateTime getTime() {
         return time;
     }
+    
+    @Override
+    public String toString(){
+        return "Animal: " + animal.getName() + ", Time: " + time.toString();
+    }
 
     public static Appointment buildAppointment(Map<String, String> appointmentMap){
         Map<String, String> animalMap = DBInterface.filter("animals", a -> a.getKey().equals(appointmentMap.get("animal"))).get(appointmentMap.get("animal"));

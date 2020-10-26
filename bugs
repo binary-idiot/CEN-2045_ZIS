@@ -1,3 +1,10 @@
 1. Feeding task should be per enclosure - Feeding tasks should be for each enclosure instead of each animal
 2. No list for enclosures
 3. User can enter duplicate ids when creating a new animal or species
+4. FeedingSchedule.getNext returns first element in array instead of next animal to be fed
+5. When adding an animal or species the last typed int is automaticlly captured instead of waiting for user to enter the propeted value
+6. Looking up an species to add an animal does not work all the time
+7. entering enclosure info for added animal throws a null pointer exception
+8. When creating an appointment the last typed int is automaticlly captured instead of waiting for user to enter the propeted value causing a DateTimeParseException
+9. When modifing notes the last typed int is automaticlly captured instead of waiting for user to enter the propeted value
+10. When ordering medicine the last typed int is automaticlly captured instead of waiting for user to enter the propeted value

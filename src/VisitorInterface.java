@@ -65,7 +65,7 @@ public class VisitorInterface {
 				System.out.println((i+1) + ". " + animals.getAnimal(i).getName());
 			}
 			
-			System.out.println(numAnimals + ". Back");
+			System.out.println((numAnimals + 1) + ". Back");
 			selection = input.nextInt() - 1;
 			
 			if(selection >=0 && selection < numAnimals){
@@ -91,7 +91,7 @@ public class VisitorInterface {
 				System.out.println((i+1) + ". " + species.getSpecies(i).getName());
 			}
 			
-			System.out.println(numSpecies + ". Back");
+			System.out.println((numSpecies + 1) + ". Back");
 			selection = input.nextInt() - 1;
 			
 			if(selection >=0 && selection < numSpecies){

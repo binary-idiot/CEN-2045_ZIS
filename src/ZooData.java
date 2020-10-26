@@ -82,7 +82,7 @@ public class ZooData {
         tasks.put("7", createFeedingTask("a7", "14:00", "false"));
         tasks.put("8", createFeedingTask("a8", "13:00", "false"));
         tasks.put("9", createFeedingTask("a9", "14:00", "false"));
-        tasks.put("10", createFeedingTask("a10", "10:00a", "false"));
+        tasks.put("10", createFeedingTask("a10", "10:00", "false"));
 
         return tasks;
     }
