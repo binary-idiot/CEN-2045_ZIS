@@ -67,6 +67,7 @@ public class StaffInterface {
             System.out.println("8. Log out");
             
             selection = input.nextInt();
+            input.nextLine();
             if(selection >= 1 && selection <= 8){
                 validSelection = true;
             }else{
@@ -92,6 +93,7 @@ public class StaffInterface {
             
             System.out.println((numAnimals + 1) + ". Back");
             selection = input.nextInt() - 1;
+            input.nextLine();
             
             if(selection >=0 && selection < numAnimals){
                 System.out.println(animals.getAnimal(selection).toString());
@@ -118,7 +120,8 @@ public class StaffInterface {
             
             System.out.println((numSpecies + 1) + ". Back");
             selection = input.nextInt() - 1;
-            
+            input.nextLine();
+
             if(selection >=0 && selection < numSpecies){
                 System.out.println(species.getSpecies(selection).toString());
             }else if(selection == numSpecies){
@@ -140,7 +143,7 @@ public class StaffInterface {
         System.out.println("Enter Species name");
         String speciesName = input.nextLine();
         Species species;
-        Optional<Species> speciesResult = this.species.getSpecies(input.nextLine());
+        Optional<Species> speciesResult = this.species.getSpecies(speciesName);
         if(speciesResult.isPresent()){
             species = speciesResult.get();
         }else{
@@ -150,6 +153,7 @@ public class StaffInterface {
         
         System.out.println("Enter enclosure number");
         int enclosure = input.nextInt();
+        input.nextLine();
         
         System.out.println("Enter enclosure info");
         String info = input.nextLine();
@@ -171,6 +175,7 @@ public class StaffInterface {
         
         System.out.println("Enter food amount");
         int amount = input.nextInt();
+        input.nextLine();
         
         Species species = new Species(name, info, food, amount);
         this.species.addSpecies(species);
@@ -186,6 +191,7 @@ public class StaffInterface {
     private void feedAnimal(){
         System.out.println("1. Feed next animal\nor\n2. Feed specific animal");
         int selection = input.nextInt();
+        input.nextLine();
         FeedingTask task;
         
         if(selection == 1) {
@@ -194,6 +200,7 @@ public class StaffInterface {
             System.out.println("Enter number of feeding task to complete");
             viewSchedule();
             int selectedTask = input.nextInt() - 1;
+            input.nextLine();
              task = schedule.getSchedule().get(selectedTask);
         }else{
             System.out.println("Invalid selection");
@@ -207,6 +214,7 @@ public class StaffInterface {
     private void createAppointment(){
         System.out.println("Enter animal");
         Animal animal = animals.getAnimal(input.nextInt());
+        input.nextLine();
         
         System.out.println("Enter appointment time (YYYY-MM-DDThh:mm:00)");
         LocalDateTime time = LocalDateTime.parse(input.nextLine());

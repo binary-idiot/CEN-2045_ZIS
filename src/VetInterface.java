@@ -59,6 +59,7 @@ public class VetInterface {
 			System.out.println("7. Logout");
 			
 			selection = input.nextInt();
+			input.nextLine();
 			if(selection >= 1 && selection <= 7){
 				validSelection = true;
 			}else{
@@ -84,6 +85,7 @@ public class VetInterface {
 			
 			System.out.println((numAnimals + 1) + ". Back");
 			selection = input.nextInt() - 1;
+			input.nextLine();
 			
 			if(selection >=0 && selection < numAnimals){
 				System.out.println(animals.getAnimal(selection).toString());
@@ -99,6 +101,7 @@ public class VetInterface {
 	private void modifyNotes() {
 		System.out.println("Which animal do you want to add notes to?");
 		Animal animal = animals.getAnimal(input.nextInt());
+		input.nextLine();
 		
 		System.out.println("What notes do you want to add?");
 		String notes = input.nextLine();
@@ -116,6 +119,7 @@ public class VetInterface {
 	private void createAppointment(){
 		System.out.println("Enter animal");
 		Animal animal = animals.getAnimal(input.nextInt());
+		input.nextLine();
 		
 		System.out.println("Enter appointment time (YYYY-MM-DDThh:mm:00)");
 		LocalDateTime time = LocalDateTime.parse(input.nextLine());
@@ -127,6 +131,7 @@ public class VetInterface {
 		System.out.println("Enter appointment you want to remove");
 		viewAppointments();
 		int appointmentNum = input.nextInt();
+		input.nextLine();
 		Appointment appointment = appointments.getAppointments().get(appointmentNum);
 		appointments.removeAppointment(appointment);
 	}

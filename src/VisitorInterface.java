@@ -42,6 +42,7 @@ public class VisitorInterface {
 			System.out.println("3. Log out");
 			
 			selection = input.nextInt();
+			input.nextLine();
 			if(selection >= 1 && selection <= 3){
 				validSelection = true;
 			}else{
@@ -67,6 +68,7 @@ public class VisitorInterface {
 			
 			System.out.println((numAnimals + 1) + ". Back");
 			selection = input.nextInt() - 1;
+			input.nextLine();
 			
 			if(selection >=0 && selection < numAnimals){
 				System.out.println(animals.getAnimal(selection).toString());
@@ -93,6 +95,7 @@ public class VisitorInterface {
 			
 			System.out.println((numSpecies + 1) + ". Back");
 			selection = input.nextInt() - 1;
+			input.nextLine();
 			
 			if(selection >=0 && selection < numSpecies){
 				System.out.println(species.getSpecies(selection).toString());

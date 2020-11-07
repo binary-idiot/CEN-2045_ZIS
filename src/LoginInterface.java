@@ -53,6 +53,7 @@ public class LoginInterface {
 			System.out.println("Enter number for corresponding login:");
 			
 			selection = input.nextInt();
+			input.nextLine();
 			if(selection >= 1 && selection <= 4){
 				validSelection = true;
 			}else{

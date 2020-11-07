@@ -47,7 +47,7 @@ public class Animal {
     }
 
     public String getNotes() {
-        return notes.equals("") ? notes : "No notes yet";
+        return notes == null ? "No notes yet" : notes;
     }
 
     public static Animal buildAnimal(Map<String, String> animalMap){

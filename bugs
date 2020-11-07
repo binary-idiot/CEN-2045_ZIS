@@ -3,8 +3,14 @@
 3. User can enter duplicate ids when creating a new animal or species
 4. FeedingSchedule.getNext returns first element in array instead of next animal to be fed
 5. When adding an animal or species the last typed int is automaticlly captured instead of waiting for user to enter the propeted value
+    fixed by finishing reading line after a call to nextInt()
 6. Looking up an species to add an animal does not work all the time
+    fixed by passing speciesName to lookup instead of getting line from input
 7. entering enclosure info for added animal throws a null pointer exception
-8. When creating an appointment the last typed int is automaticlly captured instead of waiting for user to enter the propeted value causing a DateTimeParseException
-9. When modifing notes the last typed int is automaticlly captured instead of waiting for user to enter the propeted value
-10. When ordering medicine the last typed int is automaticlly captured instead of waiting for user to enter the propeted value
+    fixed by ensuring getNotes in animal class never returns null
+8. When creating an appointment the last typed int is automaticlly captured instead of waiting for user to enter the prompted value causing a DateTimeParseException
+    fixed by finishing reading line after a call to nextInt()
+9. When modifing notes the last typed int is automaticlly captured instead of waiting for user to enter the prompted value
+    fixed by finishing reading line after a call to nextInt()
+10. When ordering medicine the last typed int is automaticlly captured instead of waiting for user to enter the prompted value
+    fixed by finishing reading line after a call to nextInt()
